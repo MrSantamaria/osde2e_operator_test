@@ -7,7 +7,6 @@ import (
 
 	"github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/openshift/osde2e/pkg/common/alert"
 	viper "github.com/openshift/osde2e/pkg/common/concurrentviper"
 	"github.com/openshift/osde2e/pkg/common/helper"
 	"github.com/openshift/osde2e/pkg/common/util"
@@ -21,10 +20,6 @@ import (
 )
 
 var veleroOperatorTestName string = "[Suite: operators] [OSD] Managed Velero Operator"
-
-func init() {
-	alert.RegisterGinkgoAlert(veleroOperatorTestName, "SD-SREP", "@managed-velero-operator", "sd-cicd-alerts", "sd-cicd@redhat.com", 4)
-}
 
 var _ = ginkgo.Describe(veleroOperatorTestName, func() {
 	ginkgo.BeforeEach(func() {

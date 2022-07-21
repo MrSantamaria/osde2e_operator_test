@@ -4,6 +4,7 @@ import (
 	"github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
+	"github.com/openshift/osde2e/pkg/common/alert"
 	viper "github.com/openshift/osde2e/pkg/common/concurrentviper"
 	osde2eConfig "github.com/openshift/osde2e/pkg/common/config"
 
@@ -16,6 +17,8 @@ func main() {
 	osde2eConfig.InitViper()
 	//LoadKubeconfig will, given a path to a kubeconfig, attempt to load it into the Viper config.
 	osde2eConfig.LoadKubeconfig()
+
+	alert.RegisterGinkgoAlert("[Suite: operators] [OSD] Managed Velero Operator", "SD-SREP", "@managed-velero-operator", "sd-cicd-alerts", "sd-cicd@redhat.com", 4)
 
 	gomega.RegisterFailHandler(ginkgo.Fail)
 	suiteConfig, reporterConfig := GinkgoConfiguration()
