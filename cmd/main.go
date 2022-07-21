@@ -1,7 +1,6 @@
 package main
 
 import (
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/config"
 	"github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/ginkgo/v2"
 	"github.com/onsi/gomega"
@@ -9,18 +8,15 @@ import (
 	osde2eConfig "github.com/openshift/osde2e/pkg/common/config"
 
 	// import suites to be tested
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/openshift"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/operators"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/operators/cloudingress"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/osd"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/scale"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/state"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/verify"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/workloads/guestbook"
-	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests/workloads/redmine"
+	_ "github.com/MrSantamaria/osde2e_operator_test/pkg/tests"
 )
 
 func main() {
+	//Here all the configs that are loaded from the environment variables, flags, etc are loaded.
+	osde2eConfig.InitViper()
+	//LoadKubeconfig will, given a path to a kubeconfig, attempt to load it into the Viper config.
+	osde2eConfig.LoadKubeconfig()
+
 	gomega.RegisterFailHandler(ginkgo.Fail)
 	suiteConfig, reporterConfig := GinkgoConfiguration()
 

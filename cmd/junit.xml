@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuites tests="39" disabled="32" errors="6" failures="1" time="3600.002323662">
+      <testsuite name="OSD E2E tests" package="/Users/dsantama/Documents/GitHub/osde2e velero/cmd" tests="39" disabled="0" skipped="32" errors="6" failures="1" time="3600.002323662" timestamp="2022-07-21T14:43:56">
+          <properties>
+              <property name="SuiteSucceeded" value="false"></property>
+              <property name="SuiteHasProgrammaticFocus" value="false"></property>
+              <property name="SpecialSuiteFailureReason" value="Interrupted by Timeout"></property>
+              <property name="SuiteLabels" value="[]"></property>
+              <property name="RandomSeed" value="1658436218"></property>
+              <property name="RandomizeAllSpecs" value="false"></property>
+              <property name="LabelFilter" value=""></property>
+              <property name="FocusStrings" value=""></property>
+              <property name="SkipStrings" value=""></property>
+              <property name="FocusFiles" value=""></property>
+              <property name="SkipFiles" value=""></property>
+              <property name="FailOnPending" value="false"></property>
+              <property name="FailFast" value="false"></property>
+              <property name="FlakeAttempts" value="0"></property>
+              <property name="EmitSpecProgress" value="false"></property>
+              <property name="DryRun" value="false"></property>
+              <property name="ParallelTotal" value="1"></property>
+              <property name="OutputInterceptorMode" value=""></property>
+          </properties>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test clusterServiceVersion openshift-osd-metrics/osd-metrics-exporter should be present and in succeeded state" classname="OSD E2E tests" status="failed" time="500.001132306">
+              <failure message="failed to configure client&#xA;Unexpected error:&#xA;    &lt;clientcmd.errConfigurationInvalid | len:1, cap:1&gt;: [&#xA;        &lt;*clientcmd.errEmptyConfig | 0xc000500060&gt;{&#xA;            message: &#34;no configuration has been provided, try setting KUBERNETES_MASTER environment variable&#34;,&#xA;        },&#xA;    ]&#xA;    invalid configuration: no configuration has been provided, try setting KUBERNETES_MASTER environment variable&#xA;occurred" type="failed">/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/helper.go:101&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Setup(0xc0001aa990)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/helper.go:101 +0x3de&#xA;github.com/openshift/osde2e/pkg/common/helper.New()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/helper.go:56 +0x3e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.glob..func1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/managedvelero.go:46 +0x215&#xA;main.main()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/cmd/main.go:25 +0x3aa</failure>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test deployment should exist" classname="OSD E2E tests" status="panicked" time="500.00088243">
+              <error message="runtime error: invalid memory address or nil pointer dereference" type="panicked">/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047&#xA;panic({0x3d7f040, 0x5db0af0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047 +0x262&#xA;k8s.io/client-go/kubernetes.NewForConfig(0x0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/k8s.io/client-go@v0.19.2/kubernetes/clientset.go:379 +0x4b&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Kube(0xc0001abb60)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/clientsets.go:52 +0x5e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.pollDeployment(0xc0001abb60, {0x4226681, 0x15}, {0x4223785, 0x14})&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:487 +0xf9&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkDeployment.func1.1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:67 +0x86&#xA;github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1.1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:47 +0x55&#xA;created by github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:45 +0xe5</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test deployment should have all desired replicas ready" classname="OSD E2E tests" status="panicked" time="500.000491134">
+              <error message="runtime error: invalid memory address or nil pointer dereference" type="panicked">/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047&#xA;panic({0x3d7f040, 0x5db0af0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047 +0x262&#xA;k8s.io/client-go/kubernetes.NewForConfig(0x0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/k8s.io/client-go@v0.19.2/kubernetes/clientset.go:379 +0x4b&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Kube(0xc0001abb60)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/clientsets.go:52 +0x5e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.pollDeployment(0xc0001abb60, {0x4226681, 0x15}, {0x4223785, 0x14})&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:487 +0xf9&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkDeployment.func1.2()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:72 +0xa5&#xA;github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1.1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:47 +0x55&#xA;created by github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:45 +0xe5</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test clusterRoles should exist" classname="OSD E2E tests" status="panicked" time="500.001560698">
+              <error message="runtime error: invalid memory address or nil pointer dereference" type="panicked">/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047&#xA;panic({0x3d7f040, 0x5db0af0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047 +0x262&#xA;k8s.io/client-go/kubernetes.NewForConfig(0x0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/k8s.io/client-go@v0.19.2/kubernetes/clientset.go:379 +0x4b&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Kube(0xc0001abb60)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/clientsets.go:52 +0x5e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkClusterRoles.func1.1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:125 +0x71&#xA;github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1.1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:47 +0x55&#xA;created by github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:45 +0xe5</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test clusterRoleBindings should exist" classname="OSD E2E tests" status="panicked" time="500.002709369">
+              <error message="runtime error: invalid memory address or nil pointer dereference" type="panicked">/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047&#xA;panic({0x3d7f040, 0x5db0af0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047 +0x262&#xA;k8s.io/client-go/kubernetes.NewForConfig(0x0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/k8s.io/client-go@v0.19.2/kubernetes/clientset.go:379 +0x4b&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Kube(0xc0001abb60)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/clientsets.go:52 +0x5e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkClusterRoleBindings.func1.1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:147 +0x71&#xA;github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1.1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:47 +0x55&#xA;created by github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:45 +0xe5</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test service should exist" classname="OSD E2E tests" status="panicked" time="500.000679318">
+              <error message="runtime error: invalid memory address or nil pointer dereference" type="panicked">/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047&#xA;panic({0x3d7f040, 0x5db0af0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/panic.go:1047 +0x262&#xA;k8s.io/client-go/kubernetes.NewForConfig(0x0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/k8s.io/client-go@v0.19.2/kubernetes/clientset.go:379 +0x4b&#xA;github.com/openshift/osde2e/pkg/common/helper.(*H).Kube(0xc0001abb60)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/helper/clientsets.go:52 +0x5e&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkService.func1.1.1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:331 +0x65&#xA;reflect.Value.call({0x3b721e0, 0xc000ca8390, 0x13}, {0x41fc842, 0x4}, {0xc0006f5a68, 0x0, 0x0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/reflect/value.go:556 +0xc16&#xA;reflect.Value.Call({0x3b721e0, 0xc000ca8390, 0x13}, {0xc00009aa68, 0x0, 0x0})&#xA;&#x9;/usr/local/Cellar/go/1.17.6/libexec/src/reflect/value.go:339 +0xb7&#xA;github.com/onsi/gomega/internal.NewAsyncAssertion.func1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:48 +0xb2&#xA;github.com/onsi/gomega/internal.(*AsyncAssertion).pollActual(0xc0006ee7d0)&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:132 +0x86&#xA;github.com/onsi/gomega/internal.(*AsyncAssertion).match(0xc0006ee7d0, {0x4625530, 0x5e2e318}, 0x1, {0x0, 0x0, 0x0})&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:162 +0xd2&#xA;github.com/onsi/gomega/internal.(*AsyncAssertion).Should(0xc0006ee7d0, {0x4625530, 0x5e2e318}, {0x0, 0x0, 0x0})&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:107 +0x79&#xA;github.com/MrSantamaria/osde2e_operator_test/pkg/tests.checkService.func1.1()&#xA;&#x9;/Users/dsantama/Documents/GitHub/osde2e velero/pkg/tests/operators.go:336 +0x210&#xA;github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1.1()&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:47 +0x55&#xA;created by github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1&#xA;&#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:45 +0xe5</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] OSD Metrics Exporter Basic Test Operator Upgrade should upgrade from the replaced version" classname="OSD E2E tests" status="interrupted" time="599.991770559">
+              <error message="interrupted" type="interrupted">Interrupted by Timeout&#xA;&#xA;Here&#39;s a stack trace of all running goroutines:&#xA;  goroutine 1 [running]:&#xA;  github.com/onsi/ginkgo/v2/internal/interrupt_handler.(*InterruptHandler).InterruptMessageWithStackTraces(0xc00021d540)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/interrupt_handler/interrupt_handler.go:203 +0x2bd&#xA;  github.com/onsi/ginkgo/v2/internal.(*Suite).runNode(_, {0x4f, 0x4, {0x425f0fd, 0x28}, 0xc000a54fc0, {{0x4dfa378, 0x71}, 0x2b, {0x0, ...}, ...}, ...}, ...)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/suite.go:609 +0x82f&#xA;  github.com/onsi/ginkgo/v2/internal.(*group).attemptSpec(0xc00045c300, 0x1, {{0xc0014e3b80, 0x3, 0x3}, 0x0})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/group.go:181 +0x185b&#xA;  github.com/onsi/ginkgo/v2/internal.(*group).run(0xc00045c300, {0xc0007a3be0, 0x1, 0x1})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/group.go:303 +0x7ad&#xA;  github.com/onsi/ginkgo/v2/internal.(*Suite).runSpecs(0xc0000c4000, {0x420eb71, 0xd}, {0x5e2e318, 0x0, 0x0}, {0xc000508d40, 0x32}, 0x0, {0xc000939000, ...})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/suite.go:304 +0xee8&#xA;  github.com/onsi/ginkgo/v2/internal.(*Suite).Run(_, {_, _}, {_, _, _}, {_, _}, _, {0x464b688, ...}, ...)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/suite.go:83 +0x425&#xA;  github.com/onsi/ginkgo/v2.RunSpecs({0x2ef1b980, 0xc000215840}, {0x420eb71, 0xd}, {0xc00111fd20, 0x2, 0x2})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/core_dsl.go:280 +0xae5&#xA;  main.main()&#xA;  &#x9;/Users/dsantama/Documents/GitHub/osde2e velero/cmd/main.go:25 +0x3aa&#xA;&#xA;  goroutine 3 [chan receive]:&#xA;  k8s.io/klog/v2.(*loggingT).flushDaemon(0x5dfcd60)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/k8s.io/klog/v2@v2.30.0/klog.go:1181 +0x5b&#xA;  created by k8s.io/klog/v2.init.0&#xA;  &#x9;/Users/dsantama/go/pkg/mod/k8s.io/klog/v2@v2.30.0/klog.go:420 +0x128&#xA;&#xA;  goroutine 26 [select]:&#xA;  go.opencensus.io/stats/view.(*worker).start(0xc00018f300)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/go.opencensus.io@v0.23.0/stats/view/worker.go:276 +0x135&#xA;  created by go.opencensus.io/stats/view.init.0&#xA;  &#x9;/Users/dsantama/go/pkg/mod/go.opencensus.io@v0.23.0/stats/view/worker.go:34 +0xb6&#xA;&#xA;  goroutine 9 [chan receive]:&#xA;  github.com/golang/glog.(*loggingT).flushDaemon(0x5dfcae0)&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/golang/glog@v1.0.0/glog.go:882 +0x5b&#xA;  created by github.com/golang/glog.init.0&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/golang/glog@v1.0.0/glog.go:410 +0x1a8&#xA;&#xA;  goroutine 40 [syscall, 60 minutes]:&#xA;  os/signal.signal_recv()&#xA;  &#x9;/usr/local/Cellar/go/1.17.6/libexec/src/runtime/sigqueue.go:166 +0x28&#xA;  os/signal.loop()&#xA;  &#x9;/usr/local/Cellar/go/1.17.6/libexec/src/os/signal/signal_unix.go:24 +0x1d&#xA;  created by os/signal.Notify.func1.1&#xA;  &#x9;/usr/local/Cellar/go/1.17.6/libexec/src/os/signal/signal.go:151 +0x30&#xA;&#xA;  goroutine 12 [select]:&#xA;  github.com/onsi/ginkgo/v2/internal/interrupt_handler.(*InterruptHandler).registerForInterrupts.func2()&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/interrupt_handler/interrupt_handler.go:127 +0x188&#xA;  created by github.com/onsi/ginkgo/v2/internal/interrupt_handler.(*InterruptHandler).registerForInterrupts&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/interrupt_handler/interrupt_handler.go:122 +0x2d3&#xA;&#xA;  goroutine 68 [select]:&#xA;  github.com/onsi/gomega/internal.(*AsyncAssertion).match(0xc0007b0640, {0x4625470, 0x5e2e318}, 0x1, {0x0, 0x0, 0x0})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:198 +0x78e&#xA;  github.com/onsi/gomega/internal.(*AsyncAssertion).Should(0xc0007b0640, {0x4625470, 0x5e2e318}, {0x0, 0x0, 0x0})&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/gomega@v1.19.0/internal/async_assertion.go:107 +0x79&#xA;  github.com/openshift/osde2e/pkg/common/util.GinkgoIt.func1()&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/openshift/osde2e@v0.0.0-20220720204540-d9e9d1d6e44c/pkg/common/util/util.go:54 +0x222&#xA;  github.com/onsi/ginkgo/v2/internal.(*Suite).runNode.func2()&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/suite.go:596 +0x11c&#xA;  created by github.com/onsi/ginkgo/v2/internal.(*Suite).runNode&#xA;  &#x9;/Users/dsantama/go/pkg/mod/github.com/onsi/ginkgo/v2@v2.1.4/internal/suite.go:584 +0x74c&#xA;</error>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator configmaps should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator deployment should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator deployment should have all desired replicas ready" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator deployment should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator deployment should have all desired replicas ready" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator roles should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator roleBindings should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero backups should be complete" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit Backups" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit Restore" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit DeleteBackupRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit BackupStorageLocations" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit DownloadRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit PodVolumeBackups" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit PodVolumeRestores" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit VolumeSnapshotLocations" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit Schedules" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit ServerStatusRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be forbidden to edit RestricRepository" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit Backups" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit Restore" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit DeleteBackupRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit BackupStorageLocations" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit DownloadRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit PodVolumeBackups" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit PodVolumeRestores" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit VolumeSnapshotLocations" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit Schedules" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit ServerStatusRequests" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator velero Access should be allowed to edit RestricRepository" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator clusterRoles should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+          <testcase name="[It] [Suite: operators] [OSD] Managed Velero Operator clusterRoleBindings should exist" classname="OSD E2E tests" status="skipped" time="0">
+              <skipped message="skipped"></skipped>
+          </testcase>
+      </testsuite>
+  </testsuites>
