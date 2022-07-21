@@ -1,4 +1,4 @@
-module github.com/openshift/osde2e
+module github.com/MrSantamaria/osde2e_operator_test
 
 go 1.16
 
