@@ -9,9 +9,9 @@ require (
 	github.com/onsi/gomega v1.19.0
 	github.com/openshift/osde2e v0.0.0-20220720204540-d9e9d1d6e44c
 	github.com/operator-framework/api v0.3.6
-	github.com/vmware-tanzu/velero v1.5.0-beta.1.0.20200831161009-1dcaa1bf7512
-	k8s.io/api v0.23.0
-	k8s.io/apimachinery v0.23.0
+	github.com/vmware-tanzu/velero v1.10.2-rc.1
+	k8s.io/api v0.24.2
+	k8s.io/apimachinery v0.24.2
 	k8s.io/client-go v12.0.0+incompatible
 )
 
